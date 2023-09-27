@@ -255,30 +255,22 @@
 
     <script>
       function validarNumero(input) {
-        // Verifica se o valor é negativo
         if (input.value < 0) {
-          // Define o valor como zero
           input.value = 0;
         }
       }
       function atualizarPreco(quantidade) {
-        // Converte a quantidade para um número
         quantidade = parseInt(quantidade);
 
-        // Verifica se a quantidade é válida (não é NaN)
         if (!isNaN(quantidade)) {
-          // Preço original
           var preco = 199.99;
 
-          // Calcula o novo preço multiplicando pelo valor da quantidade
           var novoPreco = preco * quantidade;
 
-          // Atualiza o elemento com o novo preço
           document.getElementById("preco").textContent =
             "$" + novoPreco.toFixed(2);
         }
       }
-      // Obtém referências para os links e os elementos de conteúdo
       const videoLink = document.querySelector(".nav-link[href='#Videos']");
       const fotoLink = document.querySelector(".nav-link[href='#Fotos']");
       const comentarioLink = document.querySelector(
@@ -288,7 +280,6 @@
       const fotoContent = document.getElementById("fotoContent");
       const comentarioContent = document.getElementById("comentarioContent");
 
-      // Adiciona eventos de clique aos links
       videoLink.addEventListener("click", () => {
         videoContent.style.display = "block";
         fotoContent.style.display = "none";
